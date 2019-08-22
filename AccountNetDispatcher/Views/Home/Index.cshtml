@@ -1,0 +1,44 @@
+﻿@model List<AccountNetDispatcher.Models.NetDispatcherModel>
+
+
+@*<div class="content-page">*@
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card m-b-20">
+                    <div class="card-body">
+                        <br />
+                        <center><h1 class="mt-0 header-title">NetDispatcher Account</h1></center>
+                        <center><h5 class="mt-0 header-title">@DateTime.Now.ToString("d")</h5></center>
+                        <br />
+                        <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>Report_Time</th>
+                                    <th>EmpId</th>
+                                    <th>Fname</th>
+                                    <th>Login_At</th>
+                                    <th>Term</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Report_Time</td>
+                                        @*<td>@item.Report_Time.ToString("d")</td>*@
+                                        <td>@item.EmpId</td>
+                                        <td>@item.Fname</td>
+                                        <td>@item.Login_At</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*</div>*@
