@@ -15,7 +15,7 @@ namespace AccountNetDispatcher.Controllers
         {
             var list = new List<NetDispatcherModel> { };
 
-            string oradb = "Data Source=CAD930; User Id=SMAS930; Password=Intergraph.1;";
+            string oradb = "Data Source=CAD930; User Id=SMAS930; Password=xxxx;";
             using (OracleConnection conn = new OracleConnection(oradb))
             using (OracleCommand cmd = new OracleCommand())
             {
